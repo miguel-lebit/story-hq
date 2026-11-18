@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STORY - Jogo HQ Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="pagina-hq">
+        <div class="titulo-hq">⚡ STORY: A HQ INTERATIVA ⚡</div>
+
+        <div id="tela-selecao">
+            <p class="subtitulo-hq">
+                Clique em um personagem para começar sua história:
+            </p>
+
+            <div class="grade-personagens">
+                <div class="card-heroi" onclick="selecionarHeroi(0, this)">
+                    <div class="avatar-box" id="svg-0"></div>
+                    <h3>Leo Urbano</h3>
+                    <p>Estilo: Moletom e Fones</p>
+                    <span class="tag-poder">⚡ Mente Rápida</span>
+                </div>
+
+                <div class="card-heroi" onclick="selecionarHeroi(1, this)">
+                    <div class="avatar-box" id="svg-1"></div>
+                    <h3>Nova Cyber</h3>
+                    <p>Estilo: Visor Neon</p>
+                    <span class="tag-poder">💻 Hacker de Código</span>
+                </div>
+
+                <div class="card-heroi" onclick="selecionarHeroi(2, this)">
+                    <div class="avatar-box" id="svg-2"></div>
+                    <h3>Max Aventura</h3>
+                    <p>Estilo: Capa e Mochila</p>
+                    <span class="tag-poder">🏃 Super Agilidade</span>
+                </div>
+            </div>
+
+            <button id="btn-iniciar" class="btn-hq" disabled onclick="iniciarJogo()">
+                Escolha um personagem acima!
+            </button>
+        </div>
+
+        <div id="tela-historia" class="escondido">
+            <div class="quadro-cena">
+                <div class="onomatopeia" id="efeito-sonoro">BZZZT!!</div>
+                <div class="personagem-cena" id="avatar-cena"></div>
+                <div class="balao-fala">
+                    <div class="nome-falante" id="nome-cena">Herói</div>
+                    <p id="texto-cena">Texto da história...</p>
+                </div>
+            </div>
+
+            <div class="opcoes-lista" id="container-opcoes"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
